@@ -43,8 +43,10 @@ public:
       t = ans.s[i] / 10000;
       ans.s[i] %= 10000;
     }
-    while (t)
-      ans.s[ans.s[0]++] = t;
+    while (t) {
+      ans.s[ans.s[0]++] = t % 10000;
+      t /= 10000;
+    }
     return ans;
   }
 };
