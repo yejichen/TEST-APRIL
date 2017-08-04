@@ -18,10 +18,16 @@ int main()
 	{
 		cout<<"Right"<<endl;
 	}
-	else
+	else if(a[12]-'0'!=s && a[12]-'0'==10)
 	{
-		a[12]=char(s+'0');
+		a[12]='X';
 		cout<<a<<endl;
 	}
+	else
+	{
+        a[12]=char(s-'0');
+        cout<<a<<endl;
+    }
+    system("pause");
 	return 0;
 }
